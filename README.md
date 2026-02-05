@@ -123,7 +123,7 @@ This library includes a Python script located in `Examples/Graph_Plotter/` to vi
 2.  Install Python dependencies: `pip install pyserial matplotlib`
 3.  Run the script: `python main.py`
 
-**Digital Signal Processing: **
+**Digital Signal Processing:**
 The Python script implements multiple layers of software filtering to ensure a clean and stable visualization:
 * **Moving Average Filter:** Smooths the raw input data to reduce high-frequency noise while preserving the QRS complex.
 * **Median Filter (RR Intervals):** Filters heart rate calculations across a 5-beat history to eliminate outliers and provide a stable BPM reading.
@@ -148,10 +148,9 @@ The Python script implements multiple layers of software filtering to ensure a c
 
 ## 🎉 Future Improvements
 
-* **Interrupt Support:** Add support for using the MAX30003 INTB pin to trigger data reads (instead of polling in the loop).
+* **Interrupt Support:** Add support for using the MAX30003 INTB pin to trigger data reads.
 * **Dynamic Configuration:** Add functions to change Gain, Sample Rate, and Filters (LPF/HPF) at runtime without editing the library files.
 * **Advanced DSP:** Implement software-based 50Hz/60Hz notch filters to remove mains hum.
-* **SD Card Example:** Add an example sketch for logging long-term ECG data to an SD card.
 
 ## License
 
