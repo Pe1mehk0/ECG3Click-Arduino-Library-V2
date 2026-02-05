@@ -16,13 +16,24 @@ Following the release of the first version and receiving valuable interest from 
 
 * **Raw ECG Data:** Reads ECG signals.
 * **Heart Rate Detection:** Utilizes the chip's internal R-to-R hardware algorithm for accurate heart rate (BPM) calculation.
-* **Hybrid Lead-Off Detection:** Implements a robust dual-check algorithm. It monitors the **MAX30003 hardware status flags** (DC Lead-Off) and simultaneously performs **software signal analysis** to detect ADC saturation ("railing"). This ensures immediate detection of disconnected electrodes even if the hardware trigger is delayed.
+* **Hybrid Lead-Off Detection**: The library implements a dual-layer check in `isLeadOff()`. It combines hardware status flags with software-calculated saturation thresholds (±35,000 counts) to distinguish between pathological signals and floating-electrode saturation.
 
 * **Ready-to-use Defaults:**
     * **Sample rate:** 128 Hz
     * **Gain:** 40 V/V
     * **Filters:** 0.5 Hz High Pass / 40 Hz Low Pass
     * **Calibration:** Bipolar, 500 µV amplitude
+
+* **Configuration:**
+
+To ensure maximum reliability and a minimal memory footprint for wearable applications, this library uses a **Static Configuration** architecture. 
+
+* **Manual Customization**: Users requiring different specifications can easily modify the `ecg3_click.cpp` `begin` function. The header file includes a comprehensive register map for:
+    * **Extended Gain Control**: Switch between 20V/V and 40V/V.
+    * **Alternative Bias Resistors**: Options ranging from 50MΩ to 200MΩ.
+    * **Lead-Off Thresholds**: Customizable voltage and current thresholds for electrode detection.
+
+> **Note**: For "out-of-the-box" testing, the provided Python script includes a live ECG graph and BPM/RTOR monitoring with digital filters pre-tuned to these default hardware settings.
 
 ## Compatibility & Testing
 
