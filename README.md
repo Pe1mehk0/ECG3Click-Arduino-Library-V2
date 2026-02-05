@@ -28,10 +28,10 @@ Following the release of the first version and receiving valuable interest from 
 
 To ensure maximum reliability and a minimal memory footprint for wearable applications, this library uses a **Static Configuration** architecture. 
 
-* **Manual Customization**: Users requiring different specifications can easily modify the `ecg3_click.cpp` `begin` function. The header file includes a comprehensive register map for:
-    * **Extended Gain Control**: Switch between 20V/V and 40V/V.
-    * **Alternative Bias Resistors**: Options ranging from 50MΩ to 200MΩ.
-    * **Lead-Off Thresholds**: Customizable voltage and current thresholds for electrode detection.
+** **Manual Customization**: Users requiring different specifications can easily modify the `ecg3_click.cpp` `begin` function. The header file includes a comprehensive register map for:
+    *** **Extended Gain Control**: Switch between 20V/V and 40V/V.
+    *** **Alternative Bias Resistors**: Options ranging from 50MΩ to 200MΩ.
+    *** **Lead-Off Thresholds**: Customizable voltage and current thresholds for electrode detection.
 
 > **Note**: For "out-of-the-box" testing, the provided Python script includes a live ECG graph and BPM/RTOR monitoring with digital filters pre-tuned to these default hardware settings.
 
