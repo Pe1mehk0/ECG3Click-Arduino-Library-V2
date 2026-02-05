@@ -33,7 +33,8 @@ Following the release of the first version and receiving valuable interest from 
         * **Alternative Bias Resistors**: Options ranging from 50MΩ to 200MΩ.
         * **Lead-Off Thresholds**: Customizable voltage and current thresholds for electrode detection.
 
-   > **Note**: For "out-of-the-box" testing, the provided Python script includes a live ECG graph and BPM/RTOR monitoring with digital filters pre-tuned to    these default hardware settings.
+
+  > **Note**: For "out-of-the-box" testing, the provided Python script includes a live ECG graph and BPM/RTOR monitoring with digital filters pre-tuned to    these default hardware settings.
 
 ## Compatibility & Testing
 
