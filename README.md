@@ -26,7 +26,7 @@ Following the release of the first version and receiving valuable interest from 
 
 * **Configuration:**
 
-   To ensure maximum reliability and a minimal memory footprint for wearable applications, this library uses a **Static Configuration** architecture. 
+   This library uses a **Static Configuration** architecture. 
 
    * **Manual Customization**: Users requiring different specifications can easily modify the `ecg3_click.cpp` `begin` function. The header file includes a      comprehensive register map for:
         * **Extended Gain Control**: Switch between 20V/V and 40V/V.
