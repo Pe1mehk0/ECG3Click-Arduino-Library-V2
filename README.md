@@ -1,6 +1,6 @@
 # ECG 3 Click (MAX30003) Arduino Library
 
-An open-source Arduino driver for the **Maxim Integrated MAX30003** Biopotential AFE (Analog Front End).
+An open-source Arduino library for the **Maxim Integrated MAX30003** Biopotential AFE (Analog Front End).
 
 This library serves as a dedicated driver for the **MikroE ECG 3 Click**, enabling seamless communication with the **MAX30003** Biopotential AFE via SPI. 
 It was born out of necessity: at the time of its inception, no Arduino library existed for this specific board, requiring a custom solution.
