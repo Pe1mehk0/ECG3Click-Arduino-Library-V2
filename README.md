@@ -35,6 +35,14 @@ Following the release of the first version and receiving valuable interest from 
 
 > **Note**: For "out-of-the-box" testing, the provided Python script includes a live ECG graph and BPM/RTOR monitoring with digital filters pre-tuned to    these default hardware settings.
 
+* **Scaling Lead-Off Thresholds with Gain:**
+
+The library's **Hybrid Lead-Off Detection** relies on a software-calculated saturation threshold tuned to the default hardware settings. Specifically, the value of **±35,000** in `isLeadOff()` is optimized for the default **40V/V Gain**.
+
+   * **The Threshold:** 35,000 represents approximately 27% of the full ADC scale. This provides a safety buffer: it is high enough to ignore large,             healthy R-peaks (pathological signals), but low enough to instantly catch the high-amplitude "railing" caused by a lost lead.
+
+   * **Customizing for 20V/V Gain:** If you modify the configuration to use **20V/V gain** (`_MAX30003_GAIN_20VPERV`), the signal has twice the headroom,         and the saturation point effectively drops. To maintain detection reliability, you should **lower the software threshold to ±20,000**.
+
 ## Compatibility & Testing
 
 **Development Setup:**
