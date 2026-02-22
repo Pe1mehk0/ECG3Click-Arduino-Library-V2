@@ -37,7 +37,7 @@ Following the release of the first version and receiving valuable interest from 
 
 * **Scaling Lead-Off Thresholds with Gain:**
 
-The library's **Hybrid Lead-Off Detection** relies on a software-calculated saturation threshold tuned to the default hardware settings. Specifically, the value of **±35,000** in `isLeadOff()` is optimized for the default **40V/V Gain**.
+   The library's **Hybrid Lead-Off Detection** relies on a software-calculated saturation threshold tuned to the default hardware settings. Specifically, the value of **±35,000** in `isLeadOff()` is optimized for      the default **40V/V Gain**.
 
    * **The Threshold:** 35,000 represents approximately 27% of the full ADC scale. This provides a safety buffer: it is high enough to ignore large,             healthy R-peaks (pathological signals), but low enough to instantly catch the high-amplitude "railing" caused by a lost lead.
 
@@ -153,7 +153,7 @@ The Python script implements multiple layers of software filtering to ensure a c
 ## ❓ Troubleshooting
 
 **1. The ECG signal looks like random noise.**
-* Ensure the "Lead-Off" message is not appearing in the Serial Monitor.
+* Ensure the "Lead-Off" message is not appearing in the Serial Monitor (the Python script is designed to work alongside the code located in `Examples/ECG_v2`).
 * Use a battery or a clean USB power source (laptops on chargers often inject 50Hz/60Hz noise).
 * Keep the electrode cables still; movement creates large artifacts.
 
@@ -163,7 +163,7 @@ The Python script implements multiple layers of software filtering to ensure a c
 
 **3. Heart Rate is 0.**
 * The MAX30003 takes a few seconds to settle and calculate the first R-to-R interval.
-* Ensure the electrodes are placed correctly (Left Arm, Right Arm, Right Leg).
+* Ensure the electrodes are placed correctly (Left Arm, Right Arm, and Left Leg, or on the left side of the body close to the ribs).
 
 ## 🎉 Future Improvements
 
